@@ -1,4 +1,5 @@
 language: bash
+
 services:
   - docker
 
@@ -14,4 +15,5 @@ before_deploy:
 deploy:
   - provider: script
     script: docker push quay.io/bcdev/kubectl:${TRAVIS_BRANCH}
-    all_branches: true
+    on:
+      all_branches: true
