@@ -1,0 +1,16 @@
+language: bash
+service: docker
+
+os:
+  - linux
+
+install:
+  - docker build -t quay.io/bcdev/kubectl:${TRAVIS_BRANCH}
+
+before_deploy:
+  - docker login -u $QUAY_USER -p $QUAY_PASSWORD quay.io
+
+deploy:
+  - provider: script
+    script: docker push quay.io/bcdev/kubectl:${TRAVIS_BRANCH}
+    all_branches: true
