@@ -7,7 +7,7 @@ os:
   - linux
 
 install:
-  - docker build -t quay.io/bcdev/kubectl:${TRAVIS_BRANCH}
+  - docker build -t quay.io/bcdev/kubectl:${TRAVIS_BRANCH} .
 
 before_deploy:
   - docker login -u $QUAY_USER -p $QUAY_PASSWORD quay.io
