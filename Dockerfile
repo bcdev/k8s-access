@@ -1,11 +1,13 @@
 FROM ubuntu:latest
 
-ARG VERSION=1.1
+ARG VERSION=1.2
 
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get -y update && apt-get install -y -qq git vim curl unzip sudo less groff
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt-get install -y -qq apt-utils git vim curl unzip sudo less groff bash-completion
 
 WORKDIR /tmp
 RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
