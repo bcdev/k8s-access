@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+ARG VERSION=1.1
+
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
@@ -45,6 +47,9 @@ ENV PATH="~/.krew/bin:${PATH}"
 RUN echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"' >> ~/.bashrc
 
 RUN export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH" && kubectl krew install oidc-login
+
+RUN echo "source <(kubectl completion bash)" >> ~/.bashrc
+RUN complete -C '/usr/local/bin/aws_completer' aws
 
 WORKDIR /workspace
 
