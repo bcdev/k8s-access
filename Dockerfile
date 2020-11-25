@@ -54,6 +54,8 @@ RUN echo "source <(kubectl completion bash)" >> ~/.bashrc
 RUN echo "source <(helm completion bash)" >> ~/.bashrc
 RUN complete -C '/usr/local/bin/aws_completer' aws
 
+RUN mkdir /home/kubectl/.aws
+
 WORKDIR /workspace
 
 ENTRYPOINT ["bash"]
