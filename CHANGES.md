@@ -7,6 +7,7 @@
   and running the image with local user permissions
 - Removed repo from travis
 - Corrected the version of the base image to v1.1
+- Added the effective group id to the entrypoint 
 
 # Changes in version v1.0
 
