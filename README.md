@@ -1,5 +1,4 @@
-[![Docker Repository on Quay](https://quay.io/repository/bcdev/kubectl/status "Docker Repository on Quay")](https://quay.io/repository/bcdev/kubectl)
-[![Build Status](https://travis-ci.org/bcdev/k8s-access.svg?branch=master)](https://travis-ci.org/bcdev/k8s-access)
+[![Docker Repository on Quay](https://quay.io/repository/bcdev/k8s-access/status "Docker Repository on Quay")](https://quay.io/repository/bcdev/kubectl)
 
 # k8s-access Docker Image
 

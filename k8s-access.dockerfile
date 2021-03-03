@@ -1,4 +1,4 @@
-FROM tt101
+FROM quay.io/bcdev/k8s-access:1.1.base
 
 WORKDIR /home/user
 
