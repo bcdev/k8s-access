@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ARG K8S_ACCESS_VERSION=1.1
+ARG K8S_ACCESS_VERSION=v1.1
 
 ENV TZ=Europe/Berlin
 

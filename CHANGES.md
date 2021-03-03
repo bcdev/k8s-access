@@ -6,7 +6,7 @@
 - Added an entrypoint script that handles user creation, auto-completion
   and running the image with local user permissions
 - Removed repo from travis
-
+- Corrected the version of the base image to v1.1
 
 # Changes in version v1.0
 
