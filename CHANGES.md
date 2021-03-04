@@ -1,3 +1,7 @@
+# Changes in version v1.2
+
+- Workdir is now /workspace which should be used to share local the local directory 
+
 # Changes in version v1.1
 
 - Split Dockerfile into k8s-access-base and k8s-access
